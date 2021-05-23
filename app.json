@@ -1,0 +1,54 @@
+{
+  "name": "Jet Bridge",
+  "description": "Universal bridge for Jet Admin – Admin panel framework for your application",
+  "repository": "https://github.com/jet-admin/jet-bridge",
+  "website": "https://jetadmin.io/",
+  "logo": "https://app.jetadmin.io/assets/images/logo-tile.svg",
+  "keywords": [
+    "admin",
+    "interface",
+    "backoffice",
+    "responsive",
+    "developers",
+    "sql"
+  ],
+  "success_url": "/api/register/",
+  "scripts": {
+    "postdeploy": "./release-tasks.sh"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "PROJECT": {
+      "description": "Unique project name from app.jetadmin.io"
+    },
+    "TOKEN": {
+      "description": "Jet Bridge token from app.jetadmin.io"
+    },
+    "DATABASE_ENGINE": {
+      "description": "Database engine, one of: postgresql, mysql, oracle, mssql+pyodbc, sqlite"
+    },
+    "DATABASE_HOST": {
+      "description": "database host"
+    },
+    "DATABASE_PORT": {
+      "description": "database port"
+    },
+    "DATABASE_NAME": {
+      "description": "database name or path (SQLite)"
+    },
+    "DATABASE_USER": {
+      "description": "database user"
+    },
+    "DATABASE_PASSWORD": {
+      "description": "database password"
+    },
+    "DATABASE_EXTRA": {
+      "description": "database extra",
+      "required": false
+    }
+  }
+}
